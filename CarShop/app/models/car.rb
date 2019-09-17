@@ -1,4 +1,4 @@
 class Car < ApplicationRecord
   belongs_to :make
-  belongs_to :part
+  has_and_belongs_to_many :parts
 end

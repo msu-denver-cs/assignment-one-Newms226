@@ -16,10 +16,11 @@
   <tbody>
     <% @cars.each do |car| %>
       <tr>
-        <td><%= car.make %></td>
+        <td><%= car.make.name %></td>
         <td><%= car.model %></td>
         <td><%= car.vin %></td>
-        <td><%= car.part %></td>
+            <%  l = car.parts.map {|p| p.name} %>
+        <td><%= l.join(", ") %></td>
         <td><%= link_to 'Show', car %></td>
         <td><%= link_to 'Edit', edit_car_path(car) %></td>
         <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
