@@ -2,4 +2,5 @@ language: ruby
 rvm:
  — 2.5
 script:
+ - cd CarShop
  - bundle exec rails test
