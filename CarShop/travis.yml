@@ -1,6 +1,6 @@
 language: ruby
 rvm:
   - 2.5
+before_install: cd CarShop
 script:
-  - cd CarShop/
   - bundle exec rails test
