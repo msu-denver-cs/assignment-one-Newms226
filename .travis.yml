@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  - 2.5.3
+before_install:
+  - cd CarShop
+  - gem install bundler -v 2.0.2
+script:
+  - bundle exec rails test
+
